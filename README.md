@@ -1,4 +1,4 @@
-Here you can find some examples of Power BI reports and SQL queries we created during the Data Intelligence training.
+Here you can find some examples of Power BI reports and SQL queries we created during the *Choose Data Analytics course*.
 
 All of them are based on dummy datasets created with OpenAI.
 
