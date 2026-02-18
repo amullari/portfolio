@@ -11,4 +11,4 @@ Includes interactive Power BI visualizations for salary ranges, gender pay gaps,
 
 Serves as a preparatory tool for HR decision-making and aligns conceptually with the **EU Pay Transparency Directive**, without replacing official reporting or national reporting solutions.
 
-## [Deciphering RNA Architecture: Structural Patterns and Genomic Location of Human RNA Loci](https://github.com/amullari/portfolio/tree/main/Project2 - RNACentral Data Analysis/README.md)
+## [Deciphering RNA Architecture](https://github.com/amullari/portfolio/tree/main/Project2-RNACentral-Data-Analysis/README.md)
