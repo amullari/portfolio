@@ -17,17 +17,17 @@ Below are selected views from the Power BI report illustrating the main analytic
 ### Salary Ranges
 
 Visual overview of salary dispersion across job categories and levels. Wide ranges and outliers highlight potential inconsistencies in role grading and compensation practices. Used to quickly identify areas that require deeper investigation.
-![Salary Ranges](/images/salary-ranges.png)
+![Salary Ranges](/project1-salary-analysis/images/salary-ranges.png)
 
 ### Salary Range Cross Table
 
 Compact tabular view of salary ranges by category and level. Provides precise numerical comparison where visual overview is not sufficient.
-![Salary Range Cross Table](/images/cross-table.png)
+![Salary Range Cross Table](/project1-salary-analysis/images/cross-table.png)
 
 ### Gender Pay Gap by Category
 
 Bar chart showing gender pay gap across job families and levels. Categories are sorted by decreasing pay gap to highlight the most critical areas. Pay gaps above 5% are flagged as potential risk indicators. Supporting lines show average male and female salaries for context.
-![Gender Pay Gap By Category](/images/salary-gap.png)
+![Gender Pay Gap By Category](/project1-salary-analysis/images/salary-gap.png)
 
 ### Male vs Female Salaries by Position
 
@@ -35,7 +35,7 @@ Scatter plot comparing average male and female salaries per job position. Point 
 
 Scatter Plot is connected with interactive table showing employee-level salary details. Clicking any chart filters the table accordingly. Supports root-cause analysis behind observed pay gaps and anomalies.
 
-   ![Male vs Female Salaries by Position](/images/scatter-plot.png)
+   ![Male vs Female Salaries by Position](/project1-salary-analysis/images/scatter-plot.png)
 
 ## 📊 Power BI Files and documentation
 
