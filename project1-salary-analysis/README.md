@@ -22,6 +22,8 @@ Selected views illustrating the main analytical perspectives:
 
 Visual overview of salary dispersion across job categories and levels. Wide ranges and outliers highlight potential inconsistencies in role grading and compensation practices. Used to quickly identify areas requiring deeper investigation.
 
+**Note on Average Salary:** All salary figures in all charts are presented as **full-time equivalent (FTE) monthly salaries**, meaning that salaries of employees with different workloads are adjusted to a standard full-time basis. This allows meaningful comparison across positions, levels, and genders, regardless of part-time or variable contracts.
+
 ![Salary Ranges](/project1-salary-analysis/images/salary-ranges.png)
 
 ### Salary Range Cross Table

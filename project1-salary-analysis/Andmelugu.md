@@ -2,6 +2,8 @@
 
 ## Table of Contents
 - [Purpose of the Data Analysis](#purpose-of-the-data-analysis)
+- [Key Findings and Usage Note](#key-findings-and-usage-note)
+- [Description of output](#description-of-output)
 - [Glossary of Terms](#glossary-of-terms)
 - [Data Protection](#data-protection)
 - [Data Model](#data-model)
@@ -10,49 +12,139 @@
   - [Monthly Workdays Table](#monthly-workdays-table)
 - [Measures](#measures)
 - [Generation of Dummy data](#generation-of-dummy-data)
-- [Description of output](#description-of-output)
 
 ## Purpose of the Data Analysis
 
-The objective of this data analysis is to create a **user-friendly analysis tool for HR staff**. This involves making salary and benefits structures understandable to employees and managers, allowing comparisons across categories, levels, and gender. The aim is to support a fair and transparent salary policy.
+The objective of this data analysis is to create a **user-friendly analytical tool for HR professionals**. The tool supports understanding of salary and benefits structures and enables comparison across categories, levels, and gender. The overall goal is to support a fair and transparent salary policy.
 
 Improving pay transparency helps build **trust**, supports **equitable pay practices**, and enables informed decision-making for both employees and management.
+
+## Key Findings and Usage Note
+
+This report demonstrates how salary and benefits data can be analyzed to identify pay gaps, ranges, and structural differences across job categories, levels, and gender.
+
+> **Important:** All results shown in this report are based on **synthetic data generated for demonstration purposes**. 
+> The reported figures, such as gender pay gaps or salary ranges, do **not represent any real organization or employees**.  
+
+When applied to your own organizational data, this analytical framework and the included Power BI reports will provide **actionable insights** specific to your workforce, enabling HR professionals and management to:
+
+- Detect potential pay disparities and outliers within categories and levels  
+- Analyze gender pay gaps and distribution patterns  
+- Drill down into detailed employee-level data to understand root causes  
+- Support fair and transparent salary decisions
+
+The charts and tables included in this report illustrate **the types of analysis and visualizations available**, not actual organizational results.
+
+HR can use **department/group filters** along with the **VisibilityDeterminer** measure to create outputs suitable for external sharing, ensuring anonymity for small groups.
+
+## Results
+
+**Note on Average Salary:** All salary figures are presented as **full-time equivalent (FTE) monthly salaries**, meaning that salaries of employees with different workloads are adjusted to a standard full-time basis. This allows meaningful comparison across positions, levels, and genders, regardless of part-time or variable contracts.
+
+### Salary Ranges
+
+This chart visualizes salary ranges across job categories and levels.  
+Wide ranges and outliers indicate potential inconsistencies in employee evaluation and pay structure.
+
+From this view, users can drill down into more detailed data to identify the underlying causes of anomalies and determine possible corrective actions.
+
+For example, the salary range of Finance Managers (2145 – 13020) suggests that job levels and grading criteria should be standardized across categories and levels, either by adjusting role definitions or aligning salaries.
+
+![Salary Ranges](/project1-salary-analysis/images/salary-ranges.png)
+
+## Salary Range Cross Table
+
+This table presents the same information in a more compact form, but with less visual clarity.
+
+![Salary Range Cross Table](/project1-salary-analysis/images/cross-table.png)
+
+### Gender Pay Gap by Category
+
+To analyze the gender pay gap by job families and levels, we use a bar chart showing job categories ordered by decreasing pay gap.
+
+The gender pay gap is calculated as the difference between average male and female salaries relative to male salaries.
+
+- A positive value indicates higher average salaries for men.  
+- A negative value indicates higher average salaries for women.
+
+A pay gap above 5% is considered critical and is highlighted in red.  
+For comparison, line charts display the average salaries of men and women within each job family.
+
+For a more detailed view by job level, a table is provided showing:
+
+- job family  
+- level  
+- gender pay gap  
+- average male salary  
+- average female salary  
+- number of employees in the group  
+
+The overall company-level gender pay gap is 10%, indicating that the issue requires further investigation at organizational level.
+
+Finally, the dashboard also includes a comparison of average male and female salaries across the entire company.
+
+![Gender Pay Gap By Category](/project1-salary-analysis/images/salary-gap.png)
+
+### Scatter Plot: Male vs Female Salaries by Position
+
+This scatter plot shows average male and female salaries by job position.
+
+- The Y-axis represents average male salary.  
+- The X-axis represents average female salary.  
+- Point size reflects the number of employees in the position.
+
+Points above the diagonal line indicate positions where male salaries are higher.  
+Points below the diagonal indicate positions where female salaries are higher.
+
+Alongside the scatter plot, a detailed salary table is provided.  
+Clicking on a point applies a position filter to the table.
+
+The table shows:
+
+- average base salary  
+- bonuses  
+- total salary  
+- number of worked days  
+- number of absent days  
+- contract start and end dates  
+- total annual salary  
+
+![Male vs Female Salaries by Position](/project1-salary-analysis/images/scatter-plot.png)
 
 ## Glossary of Terms
 
 **Base Salary** – the employee’s monthly base salary (excluding allowances or bonuses).  
 
-**Benefit** or **Variable pay** – the variable salary paid to an employee (e.g. bonus, overtime allowance).  
+**Benefit** or **Variable pay** – variable salary elements such as bonuses or overtime allowance.  
 
-**Monthly Salary** – the employee’s total monthly pay, including base salary and allowances.  
+**Monthly Salary** – the employee’s total monthly pay including base salary and benefits.  
 
-**Full-Time Monthly Salary** or **Monthly salary**  – the monthly salary of a full-time employee.  
+**Full-Time Monthly Salary** or **Monthly salary**  – monthly salary of a full-time employee.  
 
-**Average Salary** – the average monthly salary of a full-time employee over the selected period.  
+**Average Salary** – the average monthly salary of a full-time equivalent (FTE) employee over the selected period. This measure adjusts for part-time or variable workload, so that salaries of employees with different workloads are comparable on a full-time basis. It is not a simple mean of actual payments, but a normalized value reflecting what the salary would be for a full-time employee.  
 
-**Group Average Salary** – the average salary of employees within a group (e.g. department, job category).  
+**Group Average Salary** – average salary within a department, job category, or other group. 
 
-**Group Median** – the median of employees’ monthly salaries within a group, representing the typical pay level (not affected by exceptionally high or low salaries).  
+**Group Median** – median monthly salary, representing a typical pay level within a group.  
 
-**Salary Range** – the minimum and maximum values of average monthly salaries within a group.  
+**Salary Range** – minimum and maximum salaries within a group.  
 
-**Gender Pay Gap** – the difference between men’s and women’s average salaries, expressed as a percentage of men’s average salary. 
+**Gender Pay Gap** – difference between men’s and women’s average salaries, expressed as a % of men’s salary.
 
-**Category** – a group of job positions that share similar functions or job family within the organization.Each category may include multiple job titles at different levels of seniority.
+**Category** – group of job positions with similar functions within a job family; may include multiple levels.
 
-**Level** – indicates the seniority or experience of a position within a category.
+**Level** – seniority or experience level within a category.
 
 ## Data Protection
-- The HR department decides on the sharing of outputs.  
-- HR staff using the reports may access all detailed data.  
-- Final outputs are not produced for groups with fewer than 3 individuals.  
-- Data may be presented to an employee regarding their own group only.
+
+This report is intended for use by HR professionals. There are no inherent restrictions on output visibility within HR. For outputs shared outside HR, a **department/group size filter** has been implemented to ensure anonymity where needed. A dedicated **VisibilityDeterminer measure** can be applied when filtering, to suppress values for groups below the chosen threshold.
 
 ## Data Model
-![Data Model](Ülesande%20Analüüs/images/andmemudel.png)
+![Data Model](/project1-salary-analysis/images/andmemudel.png)
 ### Contract Table
 
-Contains detailed employment contract data, including key dimensions such as gender, position category, and position level. The table also includes workload information, contract dates, and employee identifiers to enable filtering and drill-down analysis across different organizational groups. Workload values are used in salary normalization and comparison calculations to ensure fair analysis across full- and part-time positions.
+Contains employment contract data including gender, category, level, workload, contract dates, and employee identifiers.
+Workload values are used to normalize salaries for fair comparison across full- and part-time employees.
 
 #### Fields
 
@@ -76,17 +168,15 @@ Contains detailed employment contract data, including key dimensions such as gen
 
 | Field Name | Calculation Type | Description |
 |-------------|------------------|--------------|
-| **No of Levels by Category** | Derived | Calculates how many distinct levels exist within each category. |
-| **Category and Level** | Derived | Combines category and level into one value, used when a category has more than one level. |
-| **LevelText** | Derived | Displays the level as a text value without the numeric prefix (e.g., “Senior” instead of “03-Senior”). |
+| **No of Levels by Category** | Derived | counts distinct levels in each category |
+| **Category and Level** | Derived | combines category and level for multi-level categories |
+| **LevelText** | Derived | textual level label without numeric prefix |
 
 ---
 
 ### Salary Table
 
-Contains detailed monthly payroll and working time data for each employee.  
-The table provides information about base salary, benefits, working days, and missed days.  
-It serves as the basis for salary analysis, and comparison of salary levels across employee groups.
+Contains monthly payroll data: base salary, benefits, working days, missed days. Used for salary analysis and comparisons.
 
 #### Fields
 
@@ -109,7 +199,7 @@ It serves as the basis for salary analysis, and comparison of salary levels acro
 ---
 
 ### Monthly Workdays Table 
-Contains number of working days and working hours for each month
+Tracks number of working days and hours per month for full-time employees.
 
 #### Fields
 
@@ -121,14 +211,8 @@ Contains number of working days and working hours for each month
 ---
 ### Measures
 
-The measures are divided into two main categories:
-
-- **General Measures** – count-based or status measures used for monitoring workforce structure and contract activity.  
-- **Analytical Measures** – salary-based or calculated measures used for analyzing pay levels, pay gaps, and distribution patterns.
-
-The separation into *General* and *Analytical* measures helps maintain clarity between **structural metrics** (headcounts, contract activity) and **quantitative pay analysis metrics** (salary levels, distribution, and equity).
-
 #### General Measures
+Headcount and contract activity metrics. Includes VisibilityDeterminer to enforce privacy for small groups.
 
 | Measure Name        | Description                                                                                                   |
 |----------------------|---------------------------------------------------------------------------------------------------------------|
@@ -144,6 +228,8 @@ The separation into *General* and *Analytical* measures helps maintain clarity b
 ---
 
 #### Analytical Measures
+
+Salary and gap metrics. All averages are FTE-adjusted and account for workload. SalaryGap can be filtered by category, level, or other dimensions.
 
 | Measure Name           | Description                                                                                                   |
 |-------------------------|---------------------------------------------------------------------------------------------------------------|
@@ -170,22 +256,12 @@ The separation into *General* and *Analytical* measures helps maintain clarity b
 - **SalaryGap** is calculated dynamically per filter context, allowing analysis by category, level, or other dimensions.  
 - **VisibilityDeterminer** supports privacy compliance by suppressing values in groups with fewer than 3 employees of either gender.  
 
-## Description of Output
-- Salary range table by category and Level
-- Salary gap analysis graphs and/or tables
-- Drill down to source data
-
 ## Generation of Dummy Data
-For demonstration we generated data with AI (ChatGPT) for 400 employees in an IT company.
-- tables for contract data and salary data as described in data model
-- data for year 2024
-- workload mainly 1, sometimes 0.5, rarely 0.75.
-- women and men salary should have small pay gap within the same job position category 
-- the contract table have employees with changed contractual conditions (position, category, level of position) and some employees who have started to work in 2024 and some employees who have left the company in year 2024. End date should be mostly empty
-- generate missed days realistically taking estonian seasionality into account and calculate smaller salaries proportionally
-- create one row for each contract for each month taking into account contract start date and end date, actual working days
+- Generated AI-based synthetic data for 400 employees in an IT company for 2024.
+- Workload: mainly 1.0, sometimes 0.5, rarely 0.75.
+- Includes employees who joined or left in 2024, or had contractual changes.
+- Missed days reflect Estonian seasonality; salaries adjusted proportionally.
+- One row per contract per month with actual working days.
+- Note: Synthetic data is for demonstration only; using your own data will produce meaningful organizational insights.
 
-![Employee statistics](/images/Employee_statistics.png)
-
-## Results
-The description of the result is in progress...
+![Employee statistics](/project1-salary-analysis/images/Employee_statistics.png)
